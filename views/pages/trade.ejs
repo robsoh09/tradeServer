@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('../partials/header'); %>
+</header>
+
+<main>
+<div class="row">
+  <div class="col-sm-8">
+    <div class="jumbotron">
+      <h1>Trade Demo</h1>
+      <p>Trade ETH to TUSD?</p>
+      <form action="/run" method="POST">
+            <label> Convert  ETH to TUSD</label>
+           <input type="text" id="eth" name="ethAmount" value="" placeholder="Amount of ETH" /><br><br>
+           <input type="submit" value="submit"/><br><br>          
+
+
+      </form>
+
+    </div>
+  </div>
+
+  <div class="col-sm-4">
+    <div class="well">
+      <h3>Version 1</h3>
+    </div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
