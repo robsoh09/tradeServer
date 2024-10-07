@@ -35,7 +35,7 @@ async function getDetails() {
       
       //calculate the amount of items in the currency list for loop.
       const data = await response.json();
-      //console.log(data.data)
+      console.log(data);
       const balances = data['data'];
       const dataLength = ((balances.length))
       

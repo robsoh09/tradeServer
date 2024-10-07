@@ -10,17 +10,29 @@
 </header>
 
 <main>
-  <div class="jumbotron">
-    
-    <h2>ATM Account</h2>
-    <p>Coin: <%= coinName %> </p>
-    <p>Balance: <%= coinBalance %></p>
-    <p>TUSD: <%= tUsd %></p>
+<div class="row">
+  <div class="col-sm-8">
+    <div class="jumbotron">
+      <h2>BitGo Trading Account</h2>
+      <p>Coin: <%= coinName %> </p>
+      <p>Balance: <%= coinBalance %></p>
+      <p>TUSD: <%= tUsd %></p>
+  
+      <p>Current USD Price for ETH </p>
+      <p>1 ETH-to-USD: <%= ethUsd %></p>
+  
 
-    <p>Trade to USDT? </p>
-    <p>1 ETH-to-USD: <%= ethUsd %></p>
-
+    </div>
   </div>
+
+  <div class="col-sm-4">
+    <div class="well">
+      <br><br><br>
+      <h3><u>BitGo Wallet Account</u></h3>
+      <p>Wallet: <%= coinName %> </p>
+    </div>
+  </div>
+</div>
 </main>
 
 <footer>

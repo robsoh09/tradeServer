@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('../partials/header'); %>
+</header>
+
+<main>
+  <div class="jumbotron">
+    
+    
+    <h2>BitGo Trading Account</h2>
+    <p>Coin: <%= coinName %> </p>
+    <p>Balance: <%= coinBalance %></p>
+    <p>TUSD: <%= tUsd %></p>
+
+    <p>Current USD Price for ETH </p>
+    <p>1 ETH-to-USD: <%= ethUsd %></p>
+
+  
+  <div class="col-sm-4">
+    <div class="well">
+      <h3>BitGo Wallet Accounts</h3>
+      <p>Insert Balance</p>
+    </div>
+  </div>
+
+
+</main>
+
+<footer>
+  <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>

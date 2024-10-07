@@ -14,9 +14,12 @@
   <div class="col-sm-8">
     <div class="jumbotron">
       <h1>Trade Demo</h1>
-      <p>Trade ETH to TUSD?</p>
+    
+      <p>Current USD Price for ETH </p>
+      
       <form action="/run" method="POST">
-            <label> Convert  ETH to TUSD</label>
+            <label> Submit Market Order: ETH to TUSD</label>
+            <br>
            <input type="text" id="eth" name="ethAmount" value="" placeholder="Amount of ETH" /><br><br>
            <input type="submit" value="submit"/><br><br>          
 
@@ -28,7 +31,11 @@
 
   <div class="col-sm-4">
     <div class="well">
-      <h3>Version 1</h3>
+      <br><br><br>
+
+      <h3><u>ETH to USD Pricing</u></h3>
+      <p>Trade ETH to TUSD?</p>
+      <p>1 ETH-to-USD: <%= ethUsd %></p>
     </div>
   </div>
 </div>

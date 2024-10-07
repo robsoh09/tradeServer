@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('../partials/header'); %>
+</header>
+
+<main>
+<div class="row">
+  <div class="col-sm-8">
+    <div class="jumbotron">
+      <h1>Staking Demo</h1>
+      <p>Staking of Solana?</p>
+      <form action="/solstake" method="POST">
+            <label> How many Solana to stake?</label>
+           <input type="text" id="sol" name="solAmount" value="" placeholder="Amount of SOL" /><br><br>
+           <input type="submit" value="submit"/><br><br>          
+
+
+      </form>
+
+    </div>
+  </div>
+
+  <div class="col-sm-4">
+    <div class="well">
+      <br><br><br>
+      <h3><u>Staking Info</u></h3>
+      <p>Wallet Name: <%= walletLabel %> </p>
+      <p>Confirmed Balance: <%= confirmedBalance %></p>
+      <p>Spendable Balance: <%= spendableBalance %></p>
+      <p>Current Earned Rewards: <br><%= solRewards %> SOL</p>
+      <p>APY Rate: <%= apyRate %></p>
+     
+      
+
+      
+
+    </div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
