@@ -11,13 +11,15 @@ import { BitGo}  from 'bitgo';
 import { coins } from '@bitgo/sdk-core';
 
 //bitgo variable 
-const accessToken = 'v2x00a6148b1f6a43227117ec27eb5f00eb5efd55916b95e432e63f71eccdfa4723';
+//enter your accesstoken 
+const accessToken = '';
 const bitgo = new BitGo({ env: 'test', accessToken: accessToken});
 const coin = 'ofc';
 bitgo.register(coin, coins.Ofc.createInstance);
 
-const walletId = '6594088b960a09efa604453cd16d3f36';
-const tradeWallet = '6513b5ed0816d8000797bb3c864cae6d';
+//enter walletId tradingWallet ID 
+const walletId = '';
+const tradeWallet = '';
 const stakeCoin = 'tsol';
 
 //set express to ejs view 
