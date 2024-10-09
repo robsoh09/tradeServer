@@ -76,7 +76,7 @@ async function getWalletDetails() {
             throw new Error(`HTTP Error ${response.status}`);
             }
         const walletData = await response.json();
-        console.log(walletData);
+        //console.log(walletData);
         //zeroing the array 
         walletInfo.length = 0;
         walletInfo.push({"confirmBalance" : walletData.confirmedBalanceString});
@@ -194,7 +194,67 @@ res.render('pages/trade', {
 
 });
 
+//Wallet Link
+app.get('/wallet', (req, res) => {
+    
+    res.render('pages/wallet', {
 
+    
+    });
+    
+    
+    });
+
+app.post('/getadd', (req, res) => {
+   
+    const coinName = req.body.getCoin;
+    console.log(coinName);
+    const walletId = req.body.getId;
+    console.log(walletId)
+    let walletInfo = [];
+    async function getWalletDetails() {
+        
+        try{                                      
+            const response = await fetch(`https://app.bitgo-test.com/api/v2/${coinName}/wallet/${walletId}/addresses?includeBalances=true`, {
+                method: 'GET',
+                headers: {
+                 'Content-Type': 'application/json',
+                 'accept': 'application/json',
+                 'Authorization': `Bearer ${accessToken}`
+                }
+                   
+             });
+             if(!response.ok){
+                throw new Error(`HTTP Error ${response.status}`);
+                }
+            const walletData = await response.json();
+            console.log(JSON.stringify(walletData, null, 4));
+            //zeroing the array 
+            walletInfo.length = 0;
+            walletInfo.push({"confirmBalance" : walletData.confirmedBalanceString});
+            walletInfo.push({"spendableBalance" : walletData.spendableBalanceString});
+            walletInfo.push({"label": walletData.label});
+            
+        } catch (error) {
+            console.error('Refer to Error msg:', error);
+            throw error;
+        }
+
+      
+
+    
+    }
+    getWalletDetails();
+
+
+
+}
+
+
+
+
+
+)
 
 //Trade eth 
 app.post('/run', (req, res) => {

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('../partials/header'); %>
+</header>
+
+<main>
+<div class="row">
+  <div class="col-sm-8">
+    <div class="jumbotron">
+      <h1>Staking Demo</h1>
+      <p>Get Wallet Addresses</p>
+      <form action="/getadd" method="POST">
+            <label>Enter Wallet Id</label>
+           <input type="text" id="getId" name="getId" value="" placeholder="Wallet Id" /><br><br>
+           <label>Enter Coin</label>
+           <input type="text" id="getCoin" name="getCoin" value="" placeholder="Coin Name" /><br><br>
+           <input type="submit" value="submit"/><br><br>          
+
+
+      </form>
+
+    </div>
+  </div>
+
+  <div class="col-sm-4">
+    <div class="well">
+      <br><br><br>
+      <h3><u>Wallet Details</u></h3>
+      
+     
+      
+
+      
+
+    </div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
